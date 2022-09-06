@@ -5,3 +5,7 @@ export { Button } from "./button";
 export { Cards } from "./cards";
 export { Footer } from "./footer";
 export { Container } from "./container";
+export { Chances } from "./probability";
+export { List } from "./ListMaker";
+export { Checkit } from "./palindrome";
+export { Calculate } from "./Series";

@@ -1,16 +1,19 @@
 import React from "react";
 
-import { Container, Header, Main, Footer, Cards } from "@components";
+import {
+  Container,
+  Header,
+  Main,
+  Chances,
+  List,
+  Calculate,
+  Checkit
+  
+
+} from "@components";
 
 const Home: React.FC = () => {
-  return (
-    <Container>
-      <Header />
-      <Main />
-      <Cards />
-      <Footer />
-    </Container>
-  );
+  return <Calculate/>;
 };
 
 export default Home;
