@@ -65,6 +65,11 @@ export const Calculate = () => {
         >
           Button
         </button>
+        <ul>
+          {result.map(function (item) {
+            return <li key={item}> {item} </li>;
+          })}
+        </ul>
       </div>
     </div>
   );
