@@ -1,10 +1,7 @@
 import {
-  BarsArrowUpIcon,
-  UsersIcon,
   PlusIcon,
 } from "@heroicons/react/20/solid";
 import { useState } from "react";
-
 
 interface TodoItem {
   name: string;
@@ -15,31 +12,49 @@ export const TodoApp = () => {
   const [todos, setTodos] = useState<TodoItem[]>([]);
   const [newTodoName, setNewTodoName] = useState("");
 
+  // Add a new todo
   const addTodo = (name: string) => {
+
+    // Create a new TodoItem with isCompleted set to false
     const newTodo: TodoItem = {
       name: name,
       isCompleted: false,
     };
 
+    // Add the new TodoItem to the list of todos
     setTodos([...todos, newTodo]);
+
+    // Clear the new todo name
     setNewTodoName("");
   };
 
+  // Remove a todo with the given index
   const deleteTodo = (index: number) => {
+
+    // Create a new list of todos without the todo at the given index
     const newTodoArray = [...todos];
     newTodoArray.splice(index, 1);
 
+    // Update the list of todos
     setTodos(newTodoArray);
   };
 
+  // Clear all todos
   const clearAll = () => {
+
+    // Update the list of todos with an empty list
     setTodos([]);
   }
 
+
+  // Change the isCompleted property of the todo with the given index
   const toggleTodo = (index: number) => {
     const newTodoArray = [...todos];
+
+    // Update the todo at the given index with opposite isCompleted value
     newTodoArray[index].isCompleted = !newTodoArray[index].isCompleted;
 
+    // Update the list of todos
     setTodos(newTodoArray);
   }
 
